@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./App.css";
 // Dependencies
 import { Route, Routes } from "react-router-dom";
 
@@ -12,16 +12,18 @@ import NewSong from "./Pages/NewSong";
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <header>TUNER</header>
       <main>
-        <h1>Does this Renders</h1>
+        <NavBar />
         <Routes>
           <Route exact path="/" element={<Songs />} />
           <Route path="/:id" element={<SongsIndex />} />
           <Route path="/:id/edit" element={<SongEdit />} />
           <Route path="/new" element={<NewSong />} />
         </Routes>
+        <aside>Aside</aside>
       </main>
+      <footer>Footer</footer>
     </div>
   );
 }

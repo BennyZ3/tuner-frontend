@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <div className="NavBar">
       Nav Bar
-      <button>New</button>
+      <Link to="/new">
+        <button>New</button>
+      </Link>
     </div>
   );
 };

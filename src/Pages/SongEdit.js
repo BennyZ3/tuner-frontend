@@ -16,7 +16,11 @@ const SongEdit = () => {
   }, []);
 
   function handleTextChange(event) {
-    setSong({ ...song, [event.target.id]: event.target.value });
+    if (event.target.id === "is_favorite") {
+      setSong({ ...song, [event.target.id]: !song.is_favorite });
+    } else {
+      setSong({ ...song, [event.target.id]: event.target.value });
+    }
   }
 
   const updateSong = (updatedSong, id) => {
@@ -64,6 +68,12 @@ const SongEdit = () => {
           id="time"
           value={song.time}
           placeholder="Time"
+        />
+        <input
+          type="checkbox"
+          id="is_favorite"
+          value={song.is_favorite}
+          onChange={handleTextChange}
         />
         <button type="submit">Submit</button>
       </form>

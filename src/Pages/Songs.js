@@ -13,9 +13,10 @@ const Songs = () => {
   }, []);
 
   return (
-    <div>
+    <article>
       <table>
         <tr>
+          <th></th>
           <th>Name</th>
           <th>Album</th>
           <th>Artist</th>
@@ -24,6 +25,7 @@ const Songs = () => {
         {songs.map((song) => {
           return (
             <tr>
+              <td>{song.is_favorite ? "⭐️" : ""}</td>
               <td>
                 <Link to={`/${song.id}`}>{song.name}</Link>
               </td>
@@ -34,7 +36,7 @@ const Songs = () => {
           );
         })}
       </table>
-    </div>
+    </article>
   );
 };
 

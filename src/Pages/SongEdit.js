@@ -13,7 +13,7 @@ const SongEdit = () => {
       .get(`${API}/songs/${id}`)
       .then((response) => setSong(response.data))
       .catch((error) => console.warn(error));
-  }, []);
+  }, [API, id]);
 
   function handleTextChange(event) {
     if (event.target.id === "is_favorite") {
@@ -24,11 +24,15 @@ const SongEdit = () => {
   }
 
   const updateSong = (updatedSong, id) => {
+    console.log(updatedSong, id);
     axios
       .put(`${API}/songs/${id}`, updatedSong)
-      .then(() => {
-        navigate(`/${id}`);
-      })
+      .then(
+        () => {
+          navigate(`/${id}`);
+        },
+        (error) => console.error(error)
+      )
       .catch((error) => console.warn(error));
   };
 
@@ -38,7 +42,7 @@ const SongEdit = () => {
   }
 
   return (
-    <div className="editPage">
+    <article className="editPage">
       <h1>Edit Song</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -77,7 +81,7 @@ const SongEdit = () => {
         />
         <button type="submit">Submit</button>
       </form>
-    </div>
+    </article>
   );
 };
 export default SongEdit;

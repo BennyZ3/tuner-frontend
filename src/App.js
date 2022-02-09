@@ -25,9 +25,9 @@ function App() {
           <Route path="/:id/edit" element={<SongEdit />} />
           <Route path="/new" element={<NewSong />} />
         </Routes>
-        <aside>Aside</aside>
+        <aside></aside>
       </main>
-      <footer>Footer</footer>
+      <footer></footer>
     </div>
   );
 }

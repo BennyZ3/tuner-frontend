@@ -1,6 +1,6 @@
 import "./App.css";
 // Dependencies
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 
 // Pages/Components
 import NavBar from "./Components/NavBar";
@@ -12,7 +12,11 @@ import NewSong from "./Pages/NewSong";
 function App() {
   return (
     <div className="App">
-      <header>TUNER</header>
+      <Link to={"/"}>
+        <header>
+          <h1>TUNER</h1>
+        </header>
+      </Link>
       <main>
         <NavBar />
         <Routes>

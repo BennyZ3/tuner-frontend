@@ -27,6 +27,7 @@ td {
   text-align: center;
 }
 
+@import url("https://fonts.google.com/specimen/Permanent+Marker") permanent;
 header {
   height: 10%;
   background-color: black;
@@ -35,9 +36,11 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
+  font-family: permanent;
 }
-h1 {
+header h1 {
   margin-top: 0px;
+  padding-top: 15px;
 }
 footer {
   height: 7.5%;
@@ -71,8 +74,11 @@ td {
   background-color: #2c3235;
   color: white;
   font-size: 18px;
+  font-weight: bold;
 }
 
-aside {
-  /* background-color: #f1f1f1; */
+td:not(td:first-of-type):hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  font-weight: bold;
 }

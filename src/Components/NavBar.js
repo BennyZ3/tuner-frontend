@@ -4,7 +4,7 @@ const NavBar = () => {
   return (
     <div className="NavBar">
       <Link to="/new">
-        <button>New</button>
+        <button>New Song</button>
       </Link>
     </div>
   );

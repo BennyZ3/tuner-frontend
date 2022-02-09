@@ -16,8 +16,8 @@ const Songs = () => {
     <article>
       <table>
         <tr>
-          <th></th>
-          <th>Name</th>
+          <th>Fav</th>
+          <th>Song</th>
           <th>Album</th>
           <th>Artist</th>
           <th>Time</th>
